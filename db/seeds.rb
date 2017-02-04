@@ -1,6 +1,8 @@
 require('pry-byebug')
 require_relative('../models/Animal')
 require_relative('../models/Owner')
+require_relative('../models/Adoption')
+
 
 animal_1 = Animal.new({
   "animal_name" => "Oreo",
@@ -34,6 +36,13 @@ owner_2 = Owner.new({
 
 owner_1.save
 owner_2.save
+
+adoption_1 = Adoption.new({
+  "owner_id" => "1",
+  "animal_id" => "1"
+  })
+
+adoption_1.save
 
 pry.binding
 nil
