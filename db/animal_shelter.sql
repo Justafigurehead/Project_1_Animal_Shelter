@@ -1,6 +1,6 @@
-DROP TABLE animals;
-DROP TABLE owners;
-DROP TABLE adoptions;
+DROP TABLE animals CASCADE;
+DROP TABLE owners CASCADE;
+DROP TABLE adoptions CASCADE;
 
 CREATE TABLE animals (
 id SERIAL4 PRIMARY KEY, 
