@@ -8,7 +8,9 @@ animal_name VARCHAR(255),
 adoption_status VARCHAR(255),
 admission_date DATE,
 species VARCHAR(255),
-breed VARCHAR(255)
+ready_by_date DATE,
+details TEXT,
+animal_pic VARCHAR(255)
 );
 
 CREATE TABLE owners (

@@ -1,0 +1,10 @@
+<h1>ALL ANIMALS</h1>
+
+<% for animal in @animals %>
+<div class = "Animal-icons">
+  <a href="">
+  <img src="<%= animal.animal_pic %>" class ="animal-pic" >
+  <p>My Name is <%= animal.animal_name %></p>
+  </a>
+</div>
+<% end %>

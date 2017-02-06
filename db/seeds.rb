@@ -9,7 +9,9 @@ animal_1 = Animal.new({
   "adoption_status" => "Not adoptable",
   "admission_date" => "2017-02-01",
   "species" => "cat",
-  "breed" => "Mixed"
+  "ready_by_date" => "2017-04-22",
+  "details" => "...",
+  "animal_pic"  => "/imgs/oreo_pic.png"
 })
 
 animal_2 = Animal.new({
@@ -17,7 +19,9 @@ animal_2 = Animal.new({
   "adoption_status" => "Ready",
   "admission_date" => "2017-02-10",
   "species" => "dog",
-  "breed" => "Shepsky"
+  "ready_by_date" => "2017-05-22",
+  "details" => "...",
+  "animal_pic" =>"/imgs/ulrich_pic.png"
 })
 
 animal_1.save
