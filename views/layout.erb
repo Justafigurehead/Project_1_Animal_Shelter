@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
   <link rel="icon" type="image/png" href="">
 
   <!-- fonts -->
@@ -10,6 +10,21 @@
   <title>John's Animal Shelter</title>
 </head>
 <body>
+
+  <div id = "banner"></div>
+
+  <nav>
+    <div class = "dropdown">
+      <button class ="dropbtn">Our Animals</button>
+      <div class ="dropdown-content">
+        <ul>
+          <li><a href="\animals">All animals</a></li>
+          <li><a href="\animals">Cats</a></li>
+          <li><a href="\animals">Dogs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <%= yield %>
 </body>
 </html>
