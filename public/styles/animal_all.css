@@ -1,23 +1,5 @@
 
 
-/*A*/
-.page-container {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;  
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 25px 100px 50px 100px;
-}
-
-.animal-icons-content {
-  width:250px;
-  height:250px;
-  border: 25px solid #519D9E;
-  border-radius: 50%;
-}
-
-
 /*
 PET ID page 
 */

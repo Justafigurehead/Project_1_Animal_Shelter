@@ -22,6 +22,11 @@ post "/animals" do
   redirect to ("/animals/#{@animal.id}")
 end
 
+get "/animals/order" do
+  @animals = Animal.order_by_admission_date()
+  erb (:"animals/index")
+  end
+
 #show animal by id
 get "/animals/:id" do
      @animal = Animal.find(params[:id])
@@ -45,3 +50,4 @@ post "/animals/:id/delete" do
   Animal.delete(params[:id])
   redirect to ("/animals")
 end
+

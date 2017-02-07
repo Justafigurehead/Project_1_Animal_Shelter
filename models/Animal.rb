@@ -56,9 +56,10 @@ class Animal
 
     # ORDER BY FUNCTIONS
 
-      def order_by_admission_date()
-        sql = "SELECT admission_date FROM animals ORDER BY admission_date ASC;"
-        SqlRunner.run(sql)
+      def self.order_by_admission_date()
+        sql = "SELECT * FROM animals ORDER BY admission_date DESC;"
+        result = SqlRunner.run(sql)
+        return result.map { |options| Animal.new(options) }
       end
 
       def order_by_readybydate()
@@ -70,8 +71,6 @@ class Animal
       sql = "SELECT DATE_PART('day', ready_by_date) - DATE_PART('day', admission_date) AS difference FROM animals WHERE id = #{@id};"
       result = SqlRunner.run(sql)
       return result
-      # date_diff = result.map {|content| Hash.new(content)}
-      # return date_diff[0][:difference]
     end
 
 end

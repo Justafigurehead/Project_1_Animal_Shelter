@@ -41,12 +41,16 @@ animal_3.save
 
 owner_1 = Owner.new({
   "full_name" => "Michaela Strachan",
-  "species_desired" => "cat"
+  "species_desired" => "cat", 
+  "adopt_status" => true,
+  "extra_details" => "Extra info here."
   })
 
 owner_2 = Owner.new({
   "full_name" => "Jamie Pilc",
-  "species_desired" => "dog"
+  "species_desired" => "dog",
+  "adopt_status" => false, 
+  "extra_details" => "Extra info here."
   })
 
 owner_1.save

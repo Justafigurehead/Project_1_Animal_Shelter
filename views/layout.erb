@@ -3,11 +3,12 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/styles/style.css">
   <link rel="stylesheet" type="text/css" href="/styles/animal_all.css">
-
+  <link rel="stylesheet" type="text/css" href="/styles/general-page-structure.css">
   <link rel="icon" type="image/png" href="">
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 
   <title>John's Animal Shelter</title>
 </head>
@@ -18,20 +19,23 @@
   <nav>
     <p>
       <div class = "dropdown">
+        <button class ="dropbtn"></button>
+      </div>
+      <div class = "dropdown">
         <button class ="dropbtn">Our Animals</button>
         <div class ="dropdown-content">
           <ul>
             <li><a href="\animals">All animals</a></li>
-            <li><a href="\animals\new">New Animal</a></li>
+            <li><a href="\animals\new">Create Animal</a></li>
           </ul>
         </div>
       </div>
       <div class = "dropdown">
-        <button class ="dropbtn">Future Owners</button>
+        <button class ="dropbtn">Our Owners</button>
         <div class ="dropdown-content">
           <ul>
             <li><a href="\owners">All owners</a></li>
-          
+            <li><a href="\owners\new">Create Owner</a></li>
           </ul>
         </div>
       </div>
@@ -39,29 +43,31 @@
         <button class ="dropbtn">Adoption</button>
         <div class ="dropdown-content">
           <ul>
-            <li><a href="\animals">All animals</a></li>
-            <li><a href="\animals">Cats</a></li>
-            <li><a href="\animals">Dogs</a></li>
+            <li><a href="\adoptions">All</a></li>
+            <li><a href="\adoptions\new">New adoption</a></li>
           </ul>
         </div>
       </div>
+
     </p>
   </nav>
   <div class = "main-container">
     <div class="sort-by-container"> 
-      <p>
-        <div class ="dropdown-content">
-          <ul>
-            <li><a href="\animals">All animals</a></li>
-            <li><a href="\animals">Cats</a></li>
-            <li><a href="\animals">Dogs</a></li>
-          </ul>
-        </div>
-
-      </p></div>
-      <div class= "main">
-        <%= yield %>
-      </div>
+      <ul>
+      <li><a href="/animals/order">Recent animals</a></li>
+      <img src="/imgs/cat_face.svg" width="50%" />
+      <li><a href="/animals/order/cat">See all cats!</a></li>
+      <img src="/imgs/cat_face.svg" width="50%" />
+      <li><a href="/animals/order/cat">See all dogs!</a></li>
+      <img src="/imgs/cat_face.svg" width="50%" />
+      <li><a href="/animals/order/cat">See all rabbits!</a></li>
+      </ul>
     </div>
-  </body>
-  </html>
+
+
+  <div class= "main">
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>

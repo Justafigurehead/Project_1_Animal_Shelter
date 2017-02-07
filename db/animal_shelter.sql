@@ -16,7 +16,9 @@ animal_pic VARCHAR(255)
 CREATE TABLE owners (
 id SERIAL4 PRIMARY KEY,
 full_name VARCHAR(255),
-species_desired VARCHAR(255)
+species_desired VARCHAR(255),
+adopt_status BOOLEAN, 
+extra_details TEXT
 );
 
 CREATE TABLE adoptions (

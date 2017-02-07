@@ -1,0 +1,12 @@
+<h1> All owners</h1>
+
+<div class = "page-container">
+  <% for owner in @owners %>
+  <a href="/owners/<%= owner.id %>">
+  <div class="icons-content" />
+    <h1><%= owner.full_name %></h1>
+    <p>Looking for a <%= owner.species_desired %>.</p>
+    </div>
+  </a>
+  <% end %>
+</div>

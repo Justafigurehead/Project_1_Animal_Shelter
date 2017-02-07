@@ -1,0 +1,30 @@
+<h1>Add new owner</h1>
+
+<form action = "/owners" method= "post">
+
+  <label>
+    <p>Full name:
+    <input type="text" name="full_name" /></p>
+  </label>
+  <label>
+    <p>Desired pet species
+    <select name = "species_desired">
+    <option value ="dog"> Dog</option>
+    <option value = "cat">Cat</option>
+    <option value = "rabbit">Rabbit</option>
+    </select></p>
+  </label>
+  <label>
+    <p>Adoption Status
+    <select name="adopt_status">
+      <option value = true>Still waiting</option>
+      <option value = false> Adopted</option>
+    </select></p>
+  </label>
+  <label>
+    <p>Details:
+    <input type="text" name="extra_details" /></p>
+  </label>
+
+<input type="submit" value="Submit owner!" />
+</form>

@@ -1,0 +1,39 @@
+
+
+/*A*/
+.page-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 25px 100px 50px 100px;
+}
+
+.icons-content {
+  width:250px;
+  height:250px;
+  background-color:#FFFFF3;
+  border: 25px solid #58C9B9;
+  border-radius: 50%;
+  margin-bottom:25px;
+}
+
+.icons-content h1 {
+  position: relative;
+  top: 19%;
+  font-size: 3.0em;
+  text-align:center;
+  font-family:'Asap', sans-serif;
+  vertical-align: middle;
+  padding:5px 15px;
+}
+
+.icons-content p {
+  position: relative;
+  top:10%;
+  font-family:'Noto Serif', serif;
+  text-align:center;
+  vertical-align: middle;
+  padding:5px 10px;
+}

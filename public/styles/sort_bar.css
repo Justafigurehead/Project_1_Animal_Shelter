@@ -1,8 +1,0 @@
-.sort-by-container {
-  display:flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width:110px;
-  min-height:300px;
-  background: #000;
-}

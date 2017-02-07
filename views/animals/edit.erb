@@ -9,33 +9,37 @@
   </label>
 
   <label>
-    Species:
-    <input type="text" name="species" value="<%= @animal.species %>" />
+    <p>Species:
+    <select name = "species">
+    <option value ="dog"> Dog</option>
+    <option value = "cat">Cat</option>
+    <option value = "rabbit">Rabbit</option>
+    </select></p>
   </label>
 
   <label>
-    Adoption status:
-    <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" />
+    <p>Adoption status:
+    <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" /></p>
   </label>
 
   <label>
-    Admission date: 
-    <input type="date" name="admission_date" value= "<%= @animal.admission_date %>" />
+    <p>Admission date: 
+    <input type="date" name="admission_date" value= "<%= @animal.admission_date %>" /></p>
   </label>
 
   <label>
-    Estimated ready for adoption date:
-    <input type="date" name="ready_by_date" value= "<%= @animal.ready_by_date %>" />
+    <p>Estimated ready for adoption date:
+    <input type="date" name="ready_by_date" value= "<%= @animal.ready_by_date %>" /></p>
   </label>
 
   <label>
-    Extra information:
-    <input type="text" name="details" value= "<%= @animal.details %>" />
+   <p> Extra information:
+    <input type="text" name="details" value= "<%= @animal.details %>" /></p>
   </label>
  
   <label>
-    Animal picture:
-    <input type="text" name="animal_pic" value= "<%= @animal.animal_pic %>" />
+    <p>Animal picture:
+    <input type="text" name="animal_pic" value= "<%= @animal.animal_pic %>" /></p>
   </label>
 
   <input type ="submit" value= "update entry" />

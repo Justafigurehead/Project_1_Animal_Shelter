@@ -1,0 +1,13 @@
+<p>Full name: <%= @owner.full_name %> </p>
+<p>Species preferences: <%= @owner.species_desired %></p>
+<p>Adoption Status: <%= @owner.adopt_status_text %></p>
+<p>Details:</p>
+<p> <%= @owner.extra_details %></p>
+
+<form action= "/owners/<%= @owner.id %>/edit" method="get">
+   <input type="submit" value="Update entry" /> 
+</form>
+
+<form action= "/owners/<%= @owner.id %>/delete" method="post">
+   <input type="submit" value="remove entry" /> 
+</form>
