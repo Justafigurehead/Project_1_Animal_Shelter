@@ -20,6 +20,7 @@ class Adoption
     return result.map{|adoption| Adoption.new(adoption)}
   end
 
+# FIX THIS 
   def self.update(options)
     sql = "UPDATE adoptions SET owner_id = #{options['owner_id']}, animal_id = #{options['animal_id']};"
     SqlRunner.run(sql)

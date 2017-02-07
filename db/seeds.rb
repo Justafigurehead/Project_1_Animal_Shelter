@@ -11,7 +11,7 @@ animal_1 = Animal.new({
   "species" => "cat",
   "ready_by_date" => "2017-04-22",
   "details" => "...",
-  "animal_pic"  => "/imgs/oreo_pic.png"
+  "animal_pic"  => "/imgs/oreo_pic.jpg"
 })
 
 animal_2 = Animal.new({
@@ -21,11 +21,22 @@ animal_2 = Animal.new({
   "species" => "dog",
   "ready_by_date" => "2017-05-22",
   "details" => "...",
-  "animal_pic" =>"/imgs/ulrich_pic.png"
+  "animal_pic" =>"/imgs/ulrich_pic.jpg"
+})
+
+animal_3 = Animal.new({
+  "animal_name" => "Max",
+  "adoption_status" => "Ready",
+  "admission_date" => "2017-02-10",
+  "species" => "dog",
+  "ready_by_date" => "2017-05-22",
+  "details" => "...",
+  "animal_pic" =>"/imgs/max_pic.jpg"
 })
 
 animal_1.save
 animal_2.save
+animal_3.save
 
 
 owner_1 = Owner.new({

@@ -2,10 +2,12 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/animal_all.css">
+
   <link rel="icon" type="image/png" href="">
 
   <!-- fonts -->
-
+  <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 
   <title>John's Animal Shelter</title>
 </head>
@@ -14,6 +16,7 @@
   <div id = "banner"></div>
 
   <nav>
+  <p>
     <div class = "dropdown">
       <button class ="dropbtn">Our Animals</button>
       <div class ="dropdown-content">
@@ -24,6 +27,27 @@
         </ul>
       </div>
     </div>
+    <div class = "dropdown">
+      <button class ="dropbtn">Future Owners</button>
+      <div class ="dropdown-content">
+        <ul>
+          <li><a href="\animals">All animals</a></li>
+          <li><a href="\animals">Cats</a></li>
+          <li><a href="\animals">Dogs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class = "dropdown">
+      <button class ="dropbtn">Adoption</button>
+      <div class ="dropdown-content">
+        <ul>
+          <li><a href="\animals">All animals</a></li>
+          <li><a href="\animals">Cats</a></li>
+          <li><a href="\animals">Dogs</a></li>
+        </ul>
+      </div>
+    </div>
+    </p>
   </nav>
   <%= yield %>
 </body>
