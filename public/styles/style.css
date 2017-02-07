@@ -14,6 +14,25 @@ body {
   margin:0px;
 }
 
+
+/****
+Main
+*****/
+
+.main-container {
+  display:flex;
+  margin-left: 2%;
+}
+
+.main {
+  justify-content: flex-end;
+  background: #efefef;
+  border:1px solid #000;
+  width:75%;
+
+  
+}
+
 /******
 BANNER  
 ******/
@@ -26,7 +45,6 @@ BANNER
   background-size: cover;
   margin:0px;
 }
-
 
 
 /******
@@ -106,3 +124,25 @@ links
   color:#519D9E;
 }
 
+
+/*SORT BY CONTAINER*/
+
+.sort-by-container {
+  width:15%;
+  max-height: 450px;
+  background: #efefef;
+  margin-right:50px;
+}
+
+/*****
+h1, p and etc
+*****/
+
+h1 {
+  font-family:'Asap', sans-serif;
+  font-size:5em;
+  text-align: center;
+  color:#222;
+  margin:5px;
+  padding-top:25px;
+}

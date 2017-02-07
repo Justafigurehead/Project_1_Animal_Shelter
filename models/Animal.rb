@@ -68,8 +68,10 @@ class Animal
       # DATE DIFFERENCE FUNCTION
       def date_diff_by_days()
       sql = "SELECT DATE_PART('day', ready_by_date) - DATE_PART('day', admission_date) AS difference FROM animals WHERE id = #{@id};"
-      result = SqlRunner.run(sql).first
+      result = SqlRunner.run(sql)
       return result
+      # date_diff = result.map {|content| Hash.new(content)}
+      # return date_diff[0][:difference]
     end
 
 end

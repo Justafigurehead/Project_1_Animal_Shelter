@@ -1,0 +1,42 @@
+
+<h1>Edit <%= @animal.animal_name %></h1>
+
+
+<form action = "/animals/<%= @animal.id %>" method= "post">
+  <label>
+    Pet name:
+    <input type = "text" name="animal_name" value = "<%= @animal.animal_name %>"/>
+  </label>
+
+  <label>
+    Species:
+    <input type="text" name="species" value="<%= @animal.species %>" />
+  </label>
+
+  <label>
+    Adoption status:
+    <input type="text" name="adoption_status" value="<%= @animal.adoption_status %>" />
+  </label>
+
+  <label>
+    Admission date: 
+    <input type="date" name="admission_date" value= "<%= @animal.admission_date %>" />
+  </label>
+
+  <label>
+    Estimated ready for adoption date:
+    <input type="date" name="ready_by_date" value= "<%= @animal.ready_by_date %>" />
+  </label>
+
+  <label>
+    Extra information:
+    <input type="text" name="details" value= "<%= @animal.details %>" />
+  </label>
+ 
+  <label>
+    Animal picture:
+    <input type="text" name="animal_pic" value= "<%= @animal.animal_pic %>" />
+  </label>
+
+  <input type ="submit" value= "update entry" />
+</form>

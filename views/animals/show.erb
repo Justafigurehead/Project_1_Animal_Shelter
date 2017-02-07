@@ -1,0 +1,32 @@
+<h1> <%= @animal.animal_name %> </h1>
+
+<div class = "pet-img-container">
+  <img src="<%= @animal.animal_pic %>" class= "animal-icons-content">
+</div>
+<div class = "pet-info-container">
+
+  <div class= "pet-details-container">
+
+    <p><strong> Current Adoption Status:</strong> <%= @animal.adoption_status %></p>
+    <p> <strong>Species:</strong> <%= @animal.species %></p>
+    <p><strong> Admission date:</strong> <%= @animal.admission_date %></p>
+    <p><strong> Estimated ready date:</strong> <%= @animal.ready_by_date %></p>
+    <p> <strong>Additional Notes:</strong></p> 
+    <p style="margin-left:5px;margin-top:-5px; color: #000;"><%= @animal.details %></p>
+  </div>
+
+  <div id="countdown-and-btns">
+   <h1> <%= @animal.date_diff_by_days.first["difference"] %></h1>
+   <p>days 'til adoption</p>
+   
+     <form action= "/animals/<%= @animal.id %>/edit" method="get">
+        <input type="submit" value="Update <%= @animal.animal_name %>" /> 
+     </form>
+
+     <form action= "/animals/<%= @animal.id %>/delete" method="post">
+        <input type="submit" value="remove entry" /> 
+     </form>
+   
+ </div>
+
+</div>

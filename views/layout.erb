@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <link rel="stylesheet" type="text/css" href="styles/animal_all.css">
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
+  <link rel="stylesheet" type="text/css" href="/styles/animal_all.css">
 
   <link rel="icon" type="image/png" href="">
 
@@ -16,39 +16,52 @@
   <div id = "banner"></div>
 
   <nav>
-  <p>
-    <div class = "dropdown">
-      <button class ="dropbtn">Our Animals</button>
-      <div class ="dropdown-content">
-        <ul>
-          <li><a href="\animals">All animals</a></li>
-          <li><a href="\animals">Cats</a></li>
-          <li><a href="\animals">Dogs</a></li>
-        </ul>
+    <p>
+      <div class = "dropdown">
+        <button class ="dropbtn">Our Animals</button>
+        <div class ="dropdown-content">
+          <ul>
+            <li><a href="\animals">All animals</a></li>
+            <li><a href="\animals\new">New Animal</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class = "dropdown">
-      <button class ="dropbtn">Future Owners</button>
-      <div class ="dropdown-content">
-        <ul>
-          <li><a href="\animals">All animals</a></li>
-          <li><a href="\animals">Cats</a></li>
-          <li><a href="\animals">Dogs</a></li>
-        </ul>
+      <div class = "dropdown">
+        <button class ="dropbtn">Future Owners</button>
+        <div class ="dropdown-content">
+          <ul>
+            <li><a href="\owners">All owners</a></li>
+          
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class = "dropdown">
-      <button class ="dropbtn">Adoption</button>
-      <div class ="dropdown-content">
-        <ul>
-          <li><a href="\animals">All animals</a></li>
-          <li><a href="\animals">Cats</a></li>
-          <li><a href="\animals">Dogs</a></li>
-        </ul>
+      <div class = "dropdown">
+        <button class ="dropbtn">Adoption</button>
+        <div class ="dropdown-content">
+          <ul>
+            <li><a href="\animals">All animals</a></li>
+            <li><a href="\animals">Cats</a></li>
+            <li><a href="\animals">Dogs</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
     </p>
   </nav>
-  <%= yield %>
-</body>
-</html>
+  <div class = "main-container">
+    <div class="sort-by-container"> 
+      <p>
+        <div class ="dropdown-content">
+          <ul>
+            <li><a href="\animals">All animals</a></li>
+            <li><a href="\animals">Cats</a></li>
+            <li><a href="\animals">Dogs</a></li>
+          </ul>
+        </div>
+
+      </p></div>
+      <div class= "main">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+  </html>

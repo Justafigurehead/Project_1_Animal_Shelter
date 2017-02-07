@@ -1,35 +1,87 @@
-.animals {
-  display:flex;
-  justify-content: center;
-  align-items:space-between;
-  width:100%;
-  margin: 2% auto 2%;
-}
 
-.animal-icons {
+
+/*A*/
+.page-container {
   display:flex;
-  align-items: center;
-  margin:25px;
-}
- 
-.animal-icons-content {
-  margin: 5px auto 5px;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 25px 100px 50px 100px;
 }
 
 .animal-icons-content {
-  width:225px;
-  height:225px;
+  width:250px;
+  height:250px;
   border: 25px solid #519D9E;
   border-radius: 50%;
-  margin:10px auto 10px;
- 
 }
 
-.animal-icons-content p{
-position:relative;
-bottom:10%;
-right:0;
-font-size:16px;
-color:#000;
-text-align:center;
+
+/*
+PET ID page 
+*/
+
+/* pet pic */
+
+.pet-img-container {
+  display:flex;
+  justify-content: center;
+}
+
+/* Pet bio/info */
+
+.pet-info-container {
+  width:75%;
+  display: flex;
+  flex-direction: row;
+  margin:1% auto 1%;
+  padding-bottom:25px;
+  padding-top:10px;
+}
+
+.pet-info-container > div {
+  flex:2 1 auto;
+  margin:5px; 
+}
+
+.pet-details-container {
+  max-width:75%;
+  background: #FFF;
+  min-height:200px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  border-radius:25px;
+}
+
+.pet-details-container p {
+  padding:5px 10px 0px 20px;
+  font-family:'Asap',sans-serif;
+}
+
+.pet-details-container p:nth-child(odd){
+  color: steelblue;
+}
+
+#countdown-and-btns {
+  padding-bottom: 10px;
+  min-height: 100px;
+  background: #fff;
+  border-radius:25px;
+  font-size: 1em;
+  font-family: 'Asap', sans-serif;
+  color: tomato;
+  text-align:center;
+}
+
+#countdown-and-btns h1 {
+  padding:5px 0px 0px 0px ;
+  font-size:5em;
+  font-family:'Asap',sans-serif;
+  text-align:center;
+}
+
+#countdown-and-btns p {
+  margin-top: -10px;
+
 }
