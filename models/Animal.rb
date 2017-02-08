@@ -93,6 +93,12 @@ class Animal
         return result.map{|options| Animal.new(options)}
       end
 
+      def self.order_not_adoptable_status()
+        sql = "SELECT * FROM animals WHERE adoption_status = 'Not adoptable';"
+        result = SqlRunner.run(sql)
+        return result.map{|options| Animal.new(options)}
+      end
+
       # DATE DIFFERENCE FUNCTION
       def date_diff_by_days()
       sql = "SELECT DATE_PART('day', ready_by_date) - DATE_PART('day', admission_date) AS difference FROM animals WHERE id = #{@id};"

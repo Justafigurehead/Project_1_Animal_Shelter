@@ -47,6 +47,11 @@ get "/animals/order" do
     erb(:"/animals/adoptable")
   end
 
+  get "/animals/order_not_adoptable_status" do
+    @animals = Animal.order_not_adoptable_status()
+    erb(:"/animals/not_adoptable")
+  end
+
 #show animal by id
 get "/animals/:id" do
      @animal = Animal.find(params[:id])
