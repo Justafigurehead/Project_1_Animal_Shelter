@@ -4,9 +4,7 @@
 <p>Details:</p>
 <p> <%= @owner.extra_details %></p>
 
-<form action= "/owners/<%= @owner.id %>/edit" method="get">
-   <input type="submit" value="Update entry" /> 
-</form>
+
 
 <form action= "/owners/<%= @owner.id %>/delete" method="post">
    <input type="submit" value="remove entry" /> 

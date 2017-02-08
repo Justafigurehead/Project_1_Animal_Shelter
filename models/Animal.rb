@@ -78,14 +78,7 @@ class Animal
         sql = "SELECT * FROM animals WHERE species = 'dog';"
         result = SqlRunner.run(sql)
         return result.map{|options| Animal.new(options)}
-      end
-
-      # def self.species(pet)
-      #   sql = "SELECT * FROM animals WHERE species = '#{pet_species}';"
-      #   result = SqlRunner.run(sql)
-      #   animals = result.map{|options| Animal.new(options)}
-      #   return animals
-      # end
+      end      
 
       def self.order_adopt_status()
         sql = "SELECT * FROM animals WHERE adoption_status = 'Ready';"
