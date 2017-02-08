@@ -1,0 +1,23 @@
+<h1>Find a new forever home</h1>
+
+<form action ="/adoptions" method="post">
+
+  <label>
+    <p>New Owner's name: </p>
+    <select name="owner_id">
+      <% for owner in @owners %>
+      <option value ="<%= owner.id %>"> <%= owner.full_name %> (wants a <%= owner.species_desired %>)</option>
+      <% end %>
+    </select>
+  </label>
+  <label>
+    <p>Select animal...</p>
+    <select name = "animal_id">
+      <% for animal in @animals %>
+      <option value = " <%= animal.id %>"><%= animal.animal_name %> (<%= animal.species %>)</option>
+      <% end %>
+    </select>
+  </label>
+
+  <input type="submit" value= "Create new forever home!">
+</form>

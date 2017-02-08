@@ -2,6 +2,9 @@ require_relative('../db/Sqlrunner')
 
 class Adoption
 
+attr_reader :id 
+attr_accessor :owner_id, :animal_id
+
   def initialize (options)
     @owner_id = options['owner_id'].to_i
     @animal_id = options['animal_id'].to_i
@@ -9,7 +12,7 @@ class Adoption
   end
 
   def save()
-    sql = "INSERT INTO adoptions (owner_id, animal_id) VALUES ('#{@owner_id}', '#{@animal_id}') RETURNING id;"
+    sql = "INSERT INTO adoptions (owner_id, animal_id) VALUES (#{@owner_id}, #{@animal_id}) RETURNING id;"
     result = SqlRunner.run(sql).first
     @id = result['id'].to_i
   end
@@ -54,10 +57,10 @@ class Adoption
     end
 
     def owner()
-      sql =  "SELECT * FROM owner
+      sql =  "SELECT * FROM owners
               INNER JOIN adoptions adopt
-              ON adopt.owner_id = owner.id
-              WHERE owner.id = #{@owner_id};"
+              ON adopt.owner_id = owners.id
+              WHERE owners.id = #{@owner_id};"
     result = SqlRunner.run(sql)
     return Owner.new(result.first)
     end

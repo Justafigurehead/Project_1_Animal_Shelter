@@ -24,5 +24,5 @@ extra_details TEXT
 CREATE TABLE adoptions (
 id SERIAL4 PRIMARY KEY,
 owner_id INT4 references owners(id) ON DELETE CASCADE,
-animal_id INT4 references owners(id) ON DELETE CASCADE
+animal_id INT4 references animals(id) ON DELETE CASCADE
 );

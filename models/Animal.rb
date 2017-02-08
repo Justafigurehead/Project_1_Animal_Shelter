@@ -73,4 +73,9 @@ class Animal
       return result
     end
 
+    # def adoptable?()
+    #   if 
+    #   end
+    # end
+
 end

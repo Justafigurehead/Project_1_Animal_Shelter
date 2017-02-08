@@ -1,0 +1,12 @@
+<h1>All adoptions</h1>
+
+<div class = "page-container">
+  <% for adoption in @adoptions %>
+  <a href="/adoptions/<%= adoption.id %>">
+  <div class="icons-content" />
+    <h1><%= adoption.owner.full_name %></h1>
+    <p>... has adopted <%= adoption.animal.animal_name %></p>
+    </div>
+  </a>
+  <% end %>
+</div>

@@ -1,0 +1,26 @@
+<h1>Edit future owner</h1>
+
+<form action ="/owners/<%= @owners.id %>" method="post">
+
+  <label>
+    <p>New Owner's name: 
+      <input type = "text" name="full_name" value = "<%= @owners.full_name %>"/></p>
+    </label>
+    <label>
+      <p>Select animal:
+       <select name = "species_desired">
+         <option value ="dog"> Dog</option>
+         <option value = "cat">Cat</option>
+         <option value = "rabbit">Rabbit</option>
+       </select></p>
+     </label>
+     <label>
+      <p>Adoption Status:
+        <input type = "text" name="adopt_status" value = "<%= @owners.adopt_status %>"/></p>
+      </label>
+      <label>
+        <p> Details:</p>
+        <input type = "text" name="extra_details" value = "<%= @owners.extra_details %>"/>
+      </label>
+      <input type="submit" value= "Edit owner">
+    </form> 

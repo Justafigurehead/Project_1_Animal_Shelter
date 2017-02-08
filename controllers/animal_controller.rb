@@ -6,7 +6,7 @@ require_relative('../models/Animal')
 # Show all animals
 get '/animals' do
   @animals = Animal.all()
-  erb (:"animals/index")
+  erb (:"/animals/index")
 end
 
 #show form to create new animal
@@ -24,7 +24,7 @@ end
 
 get "/animals/order" do
   @animals = Animal.order_by_admission_date()
-  erb (:"animals/index")
+  erb (:"/animals/index")
   end
 
 #show animal by id

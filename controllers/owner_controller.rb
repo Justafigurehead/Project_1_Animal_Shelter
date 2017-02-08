@@ -6,7 +6,7 @@ require_relative('../models/Owner')
 
 get '/owners' do
   @owners = Owner.all()
-  erb (:"owners/index")
+  erb (:"/owners/index")
 end
 
 #start form for new owner...
@@ -22,10 +22,27 @@ post '/owners' do
   @owner.save()
   redirect to ("/owners/#{@owner.id}")
 end
- 
+
 #show owner by id
 get '/owners/:id' do
-  @owner = Owner.find(params['id'])
-  erb(:"owners/show")
+  @owner = Owner.find(params[:id])
+  erb(:"/owners/show")
 end
 
+# edit owner
+get '/owners/:id/edit' do
+    @owners = Owner.find(params[:id])
+    erb(:"/owners/edit")
+end
+
+#post edit
+post '/owners/:id' do
+  @owners = Owner.update(params)
+  redirect to ("/owners/#{params[:id]}")
+end
+
+
+post '/owners/:id/delete' do
+  Owner.delete(params[:id])
+  redirect to ("/owners")
+end
