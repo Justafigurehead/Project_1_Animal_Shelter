@@ -10,7 +10,7 @@ get '/adoptions' do
   @adoptions = Adoption.all()
   erb (:"/adoption/index")
 end
- 
+  
 #show form to create new animal
 get '/adoptions/new' do
   @owners = Owner.all()
@@ -31,12 +31,8 @@ get '/adoptions/:id' do
   erb(:"/adoption/show")
 end
 
-# get '/adoptions/:id/edit' do
-#   @adoption = Adoption.find(params[:id])
-#   erb(:"/adoption/edit")
-# end
-
-# post '/adoptions/:id' do 
-#   @adoption = Adoption.update(params)
-#   redirect to ("/adoptions/#{params[:id]}")
-# end
+#delete 
+post "/adoptions/:id/delete" do
+  Adoption.delete(params[:id])
+  redirect to ("/adoptions")
+end

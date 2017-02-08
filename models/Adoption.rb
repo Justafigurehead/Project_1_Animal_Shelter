@@ -36,14 +36,15 @@ attr_accessor :owner_id, :animal_id
     return result
   end
 
-  def self.destroy(id)
+  def self.delete(id)
     sql ="DELETE FROM adoptions where id = #{id};"
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM adoptions;"
     SqlRunner.run(sql)
   end
+
+  # def self.delete_all()
+  #   sql = "DELETE FROM adoptions;"
+  #   SqlRunner.run(sql)
+  # end
 
   # INNER JOIN FUNCTIONS
 

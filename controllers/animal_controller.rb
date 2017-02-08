@@ -26,6 +26,26 @@ get "/animals/order" do
   @animals = Animal.order_by_admission_date()
   erb (:"/animals/index")
   end
+ 
+  get "/animals/order_species" do
+    @animals = Animal.order_by_species()
+    erb (:"/animals/index")
+  end
+
+  get "/animals/cats" do
+    @animals = Animal.cats
+    erb(:"/animals/cats")
+  end
+
+  get "/animals/dogs" do
+    @animals = Animal.dogs
+    erb(:"/animals/dogs")
+  end
+
+  get "/animals/order_adopt_status" do
+    @animals = Animal.order_adopt_status()
+    erb(:"/animals/adoptable")
+  end
 
 #show animal by id
 get "/animals/:id" do

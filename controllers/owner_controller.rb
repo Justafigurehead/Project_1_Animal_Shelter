@@ -37,11 +37,12 @@ end
 
 #post edit
 post '/owners/:id' do
+      
   @owners = Owner.update(params)
   redirect to ("/owners/#{params[:id]}")
 end
 
-
+#delete 
 post '/owners/:id/delete' do
   Owner.delete(params[:id])
   redirect to ("/owners")

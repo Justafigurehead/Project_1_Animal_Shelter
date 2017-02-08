@@ -5,10 +5,6 @@
 <p>Animal details: </p>
 <p><%= @adoption.animal.details %></p>
 
-<form action= "/adoptions/<%= @adoption.id %>/edit" method="get">
-   <input type="submit" value="Update adoption" /> 
-</form>
-
-<form action= "/adoptions/<%= @adoptions.id %>/delete" method="post">
+<form action= "/adoptions/<%= @adoption.id %>/delete" method="post">
    <input type="submit" value="remove entry" /> 
-</form>
+</form> 

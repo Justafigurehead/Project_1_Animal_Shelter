@@ -27,7 +27,7 @@ Main
 .main {
   justify-content: flex-end;
   background: #efefef;
-  border:1px solid #000;
+  border-top: 15px solid #58C9B9;
   width:75%;
 
   
@@ -89,9 +89,7 @@ nav p {
   z-index:1;
 }
 
-/*-webkit-transition: background-color 1000ms linear;
-  -ms-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;*/
+
 .dropdown-content ul {
   list-style: none;
   padding:0px;
@@ -115,10 +113,6 @@ nav p {
   transition: color .6s ease-in;
 }
 
-
-
-
-
 /******
 links
 ******/
@@ -135,8 +129,22 @@ links
   max-height: 450px;
   background: #efefef;
   margin-right:50px;
+  border-top: 15px solid #58C9B9;
 }
 
+.sort-by-container ul {
+  list-style: none;
+  text-align:center;
+  font-size:16px;
+  padding:15px;
+  font-family:'Asap', sans-serif;
+  line-height: 130%;
+}
+
+.sort-by-container a:hover {
+  color:#E71D36;
+  transition: color .6s ease-in;
+}
 /*****
 h1, p and etc
 *****/

@@ -62,8 +62,35 @@ class Animal
         return result.map { |options| Animal.new(options) }
       end
 
-      def order_by_readybydate()
-        sql = "SELECT ready_by_date FROM animals ORDER BY ready_by_date DESC"
+      def self.order_by_species()
+        sql = "SELECT * FROM animals ORDER BY species DESC;"
+        result = SqlRunner.run(sql)
+        return result.map{|options| Animal.new(options)}
+      end
+
+      def self.cats()
+        sql = "SELECT * FROM animals WHERE species = 'cat';"
+        result = SqlRunner.run(sql)
+        return result.map{|options| Animal.new(options)}
+      end
+
+      def self.dogs()
+        sql = "SELECT * FROM animals WHERE species = 'dog';"
+        result = SqlRunner.run(sql)
+        return result.map{|options| Animal.new(options)}
+      end
+
+      # def self.species(pet)
+      #   sql = "SELECT * FROM animals WHERE species = '#{pet_species}';"
+      #   result = SqlRunner.run(sql)
+      #   animals = result.map{|options| Animal.new(options)}
+      #   return animals
+      # end
+
+      def self.order_adopt_status()
+        sql = "SELECT * FROM animals WHERE adoption_status = 'Ready';"
+        result = SqlRunner.run(sql)
+        return result.map{|options| Animal.new(options)}
       end
 
       # DATE DIFFERENCE FUNCTION
@@ -73,9 +100,6 @@ class Animal
       return result
     end
 
-    # def adoptable?()
-    #   if 
-    #   end
-    # end
+ 
 
 end
