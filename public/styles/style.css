@@ -36,6 +36,14 @@ Main
 /******
 BANNER  
 ******/
+
+.logo {
+  justify-content: center;
+  margin:25px 10px 0px 50px ;
+  width:75%;
+  vertical-align: middle;
+}
+
 #banner {
   display:flex;
   justify-content: space-between;
